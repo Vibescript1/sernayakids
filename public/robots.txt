@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /checkout
+Disallow: /cart
+Disallow: /profile
+Disallow: /orders
+
+Sitemap: https://sernayakids.com/sitemap.xml

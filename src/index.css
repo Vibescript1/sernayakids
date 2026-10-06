@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Lato', sans-serif;
+  --font-body: 'Lato', sans-serif;
+  --font-details: 'Lato', sans-serif;
+
+  --color-brand-navy: #0A1E33;
+  --color-brand-coral: #E46A4B;
+  --color-brand-coral-hover: #d15638;
+  --color-brand-pink: #FF9EAF;
+  --color-brand-blue: #9EBDD8;
+  --color-brand-lavender: #B59ED8;
+
+  --color-bg-cream: #FBF9F4;
+  --color-bg-pink-light: #F9EBEE;
+  --color-bg-blue-light: #E3EFF2;
+  --color-bg-lavender-light: #EBE5F2;
+  --color-bg-coral-light: #FFF0EB;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-shimmer: shimmer 3.5s infinite linear;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@layer base {
+  body {
+    @apply font-body bg-bg-cream text-brand-navy antialiased overflow-x-hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold text-brand-navy leading-tight;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+
+}
